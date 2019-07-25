@@ -10,10 +10,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/reactjs/react-autocomplete.git"
+    "url": "https://github.com/danielavalero/react-autocomplete.git"
   },
-  "homepage": "https://github.com/reactjs/react-autocomplete",
-  "bugs": "https://github.com/reactjs/react-autocomplete/issues",
+  "homepage": "https://github.com/danielavalero/react-autocomplete",
+  "bugs": "https://github.com/danielavalero/react-autocomplete/issues",
   "directories": {
     "example": "examples"
   },
