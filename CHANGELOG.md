@@ -4,6 +4,11 @@ We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recomm
 ## [Unreleased]
 _(add items here for easier creation of next log entry)_
 
+## [1.8.2] - 2019-07-25
+### Added
+- Make component accessible to screen readers
+- Allow users to set the autocomplete attribute to a value different than off
+
 ## [1.8.1] - 2018-02-11
 ### Fixed
 - Prevent menu from closing prematurely on mobile (#308)
