@@ -1,23 +1,31 @@
-# React Autocomplete [![Travis build status](https://travis-ci.org/reactjs/react-autocomplete.svg?branch=master)](https://travis-ci.org/reactjs/react-autocomplete/)
+# React Autocomplete 2[![Travis build status](https://travis-ci.org/danielavalero/react-autocomplete-2.svg?branch=master)](https://travis-ci.org/danielavalero/react-autocomplete-2/)
 
-Accessible, extensible, Autocomplete for React.js.
+Accessible, extensible, Autocomplete for React.js. 
+It's a fork from `https://github.com/reactjs/react-autocomplete`.
+
+Contributions are welcomed!
 
 ```jsx
 <Autocomplete
-  getItemValue={(item) => item.label}
+  getItemValue={(item) => item.id}
+  suggestionsMenuId="input-name-suggestions"
   items={[
-    { label: 'apple' },
-    { label: 'banana' },
-    { label: 'pear' }
+    { id: 'apple', label: 'apple' },
+    { id: 'banana', label: 'banana' },
+    { id: 'pear', label: 'pear' }
   ]}
   renderItem={(item, isHighlighted) =>
-    <div style={{ background: isHighlighted ? 'lightgray' : 'white' }}>
+    <div
+      key={item.id}
+      role="option"
+      style={{ background: isHighlighted ? 'lightgray' : 'white'}}
+    >
       {item.label}
     </div>
   }
-  value={value}
-  onChange={(e) => value = e.target.value}
-  onSelect={(val) => value = val}
+  value={this.state.value}
+  onChange={e => this.setState({ value: e.target.value })}
+  onSelect={value => this.setState({ value })}
 />
 ```
 
@@ -28,19 +36,14 @@ Check out [more examples](https://reactcommunity.org/react-autocomplete/) and ge
 ### npm
 
 ```bash
-npm install --save react-autocomplete
+npm install --save react-autocomplete-2
 ```
 
 ### yarn
 
 ```bash
-yarn add react-autocomplete
+yarn add react-autocomplete-2
 ```
-
-### AMD/UMD
-
-* Development: [https://unpkg.com/react-autocomplete@1.8.1/dist/react-autocomplete.js](https://unpkg.com/react-autocomplete@1.8.1/dist/react-autocomplete.js)
-* Production: [https://unpkg.com/react-autocomplete@1.8.1/dist/react-autocomplete.min.js](https://unpkg.com/react-autocomplete@1.8.1/dist/react-autocomplete.min.js)
 
 ## API
 
@@ -50,6 +53,12 @@ yarn add react-autocomplete
 Arguments: `item: Any`
 
 Used to read the display value from each entry in `items`.
+
+### `suggestionsMenuId`: string
+Default value: ''
+
+Will be used in aria-owns of the input field, and the id of the suggestions menu to let 
+screen readers know where to find the suggestions of the autocomplete
 
 #### `items: Array`
 The items to display in the dropdown menu
@@ -154,18 +163,19 @@ this will cause `Autocomplete` to behave unexpectedly.
 #### `renderMenu: Function` (optional)
 Default value:
 ```jsx
-function(items, value, style) {
-  return <div style={{ ...style, ...this.menuStyle }} children={items}/>
+function(items, value, style, suggestionsMenuId) {
+  return <div id={suggestionsMenuId} style={{ ...style, ...this.menuStyle }} children={items}/>
 }
 ```
 
-Arguments: `items: Array<Any>, value: String, styles: Object`
+Arguments: `items: Array<Any>, value: String, styles: Object, suggestionsMenuId: string`
 
 Invoked to generate the render tree for the dropdown menu. Ensure the
 returned tree includes every entry in `items` or else the highlight order
 and keyboard navigation logic will break. `styles` will contain
 { top, left, minWidth } which are the coordinates of the top-left corner
 and the width of the dropdown menu.
+`suggestionsMenuId` needs to be the same id value that `aria-owns` of the input field has.
 
 #### `selectOnBlur: Boolean` (optional)
 Default value: `false`
