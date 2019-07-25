@@ -43,12 +43,13 @@ class App extends React.Component {
             })
           }}
           renderMenu={children => (
-            <div className="menu">
+            <div className="menu" id="input-name-suggestions" role="listbox">
               {children}
             </div>
           )}
           renderItem={(item, isHighlighted) => (
             <div
+            role="option"
               className={`item ${isHighlighted ? 'item-highlighted' : ''}`}
               key={item.abbr}
             >{item.name}</div>

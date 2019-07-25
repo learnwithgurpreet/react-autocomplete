@@ -35,6 +35,7 @@ class App extends Component {
         <label htmlFor="states">Choose a US state</label>
         <Autocomplete
           value={state.value}
+          suggestionsMenuId="input-name-suggestions"
           inputProps={{ id: 'states' }}
           items={STATES}
           shouldItemRender={matchStateToTerm}
@@ -45,12 +46,13 @@ class App extends Component {
             <div
               className={`item ${isHighlighted ? 'item-highlighted' : ''}`}
               key={item.abbr}
+              role="option"
             >
               {item.name}
             </div>
           )}
           renderMenu={children =>
-            <div className="menu">
+            <div className="menu" id="input-name-suggestions" role="listbox">
               {children}
             </div>
           }

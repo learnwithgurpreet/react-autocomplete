@@ -16,7 +16,8 @@ class App extends React.Component {
         <label htmlFor="states-autocomplete">Choose a state from the US</label>
         <Autocomplete
           value={this.state.value}
-          inputProps={{ id: 'states-autocomplete' }}
+          inputProps={{ id: 'states-autocomplete', name: 'input-name' }}
+          suggestionsMenuId="input-name-suggestions"
           wrapperStyle={{ position: 'relative', display: 'inline-block' }}
           items={getStates()}
           getItemValue={(item) => item.name}
@@ -25,7 +26,7 @@ class App extends React.Component {
           onChange={(event, value) => this.setState({ value })}
           onSelect={value => this.setState({ value })}
           renderMenu={children => (
-            <div className="menu">
+            <div className="menu" id="input-name-suggestions" role="listbox">
               {children}
             </div>
           )}
@@ -33,6 +34,7 @@ class App extends React.Component {
             <div
               className={`item ${isHighlighted ? 'item-highlighted' : ''}`}
               key={item.abbr}
+              role="option"
             >{item.name}</div>
           )}
         />
