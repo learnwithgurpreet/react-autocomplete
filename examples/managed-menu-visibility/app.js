@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader';
 import React, { Component } from 'react'
 import DOM from 'react-dom'
 import Autocomplete from '../../lib/index'
@@ -81,4 +82,4 @@ class App extends Component {
 
 DOM.render(<App/>, document.getElementById('container'))
 
-if (module.hot) { module.hot.accept() }
+export default hot(module)(App);

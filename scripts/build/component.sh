@@ -5,7 +5,6 @@ mkdir -p build/lib dist
 babel lib/{index,Autocomplete}.js -d build/
 cd dist
 browserify ../lib/Autocomplete.js \
-    --transform babelify \
     --external react \
     --external react-dom \
     --debug \
@@ -17,6 +16,4 @@ browserify ../lib/Autocomplete.js \
 uglifyjs react-autocomplete.js \
     --compress \
     --mangle \
-    --in-source-map react-autocomplete.js.map \
-    --source-map react-autocomplete.min.js.map \
-  > react-autocomplete.min.js
+    --source-map --output react-autocomplete.min.js

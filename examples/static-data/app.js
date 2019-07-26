@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader';
 import React from 'react'
 import DOM from 'react-dom'
 import { getStates, matchStateToTerm, sortStates } from '../../lib/utils'
@@ -45,4 +46,4 @@ class App extends React.Component {
 
 DOM.render(<App/>, document.getElementById('container'))
 
-if (module.hot) { module.hot.accept() }
+export default hot(module)(App);

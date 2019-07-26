@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader';
 import React from 'react'
 import DOM from 'react-dom'
 import Autocomplete from '../../lib/index'
@@ -25,6 +26,7 @@ class App extends React.Component {
         <label htmlFor="states-autocomplete">Choose a state from the US</label>
         <Autocomplete
           inputProps={{ id: 'states-autocomplete' }}
+          suggestionsMenuId="input-name-suggestions"
           wrapperStyle={{ position: 'relative', display: 'inline-block' }}
           value={this.state.value}
           items={this.state.unitedStates}
@@ -62,4 +64,4 @@ class App extends React.Component {
 
 DOM.render(<App/>, document.getElementById('container'))
 
-if (module.hot) { module.hot.accept() }
+export default hot(module)(App);
