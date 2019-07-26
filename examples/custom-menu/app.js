@@ -21,7 +21,7 @@ class App extends React.Component {
         <h1>Custom Menu</h1>
         <p>
           While Autocomplete ships with a decent looking menu, you can control the
-          look as well as the rendering of it. In this example we'll group the states
+          look as well as the rendering of it. In this example we will group the states
           into the region where they belong.
         </p>
         <label htmlFor="states-autocomplete">Choose a state from the US</label>

@@ -2,17 +2,17 @@
 
 exports[`Autocomplete.props.renderInput should be invoked in \`render\` to create the <input> element 1`] = `
 Object {
-  "aria-autocomplete": "list",
   "aria-expanded": false,
-  "autoComplete": "off",
+  "aria-owns": "menu-suggestions-id",
   "foo": "bar",
   "onBlur": [Function],
   "onChange": [Function],
   "onClick": [Function],
   "onFocus": [Function],
   "onKeyDown": [Function],
-  "ref": [Function],
-  "role": "combobox",
+  "ref": Object {
+    "current": null,
+  },
   "value": "pants",
 }
 `;
@@ -27,8 +27,8 @@ exports[`Autocomplete.props.renderInput should be invoked in \`render\` to creat
 >
   <div>
     <input
-      aria-autocomplete="list"
       aria-expanded={false}
+      aria-owns="menu-suggestions-id"
       autoComplete="on"
       foo="bar"
       onBlur={[Function]}
@@ -36,7 +36,6 @@ exports[`Autocomplete.props.renderInput should be invoked in \`render\` to creat
       onClick={[Function]}
       onFocus={[Function]}
       onKeyDown={[Function]}
-      role="combobox"
       value="pants"
     />
   </div>
