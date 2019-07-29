@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader';
 import React from 'react'
 import DOM from 'react-dom'
 import Autocomplete from '../../lib/index'
@@ -21,7 +22,7 @@ class App extends React.Component {
         <h1>Custom Menu</h1>
         <p>
           While Autocomplete ships with a decent looking menu, you can control the
-          look as well as the rendering of it. In this example we'll group the states
+          look as well as the rendering of it. In this example we will group the states
           into the region where they belong.
         </p>
         <label htmlFor="states-autocomplete">Choose a state from the US</label>
@@ -71,4 +72,4 @@ class App extends React.Component {
 
 DOM.render(<App/>, document.getElementById('container'))
 
-if (module.hot) { module.hot.accept() }
+export default hot(module)(App);

@@ -1,3 +1,4 @@
+import { hot } from 'react-hot-loader';
 import React, { Component } from 'react'
 import DOM from 'react-dom'
 import Autocomplete from '../../lib/index'
@@ -26,11 +27,11 @@ class App extends Component {
           By default Autocomplete will manage its own menu visibility, using basic logic
           to decide whether or not to display it (e.g. open on focus, keypress, close on blur,
           select, escape, etc). If you need full control over when the menu opens and closes
-          you can put Autocomplete into "managed menu visibility mode" by supplying <code>props.open</code>.
+          you can put Autocomplete into &apos;managed menu visibility mode&apos; by supplying <code>props.open</code>.
           This will force Autocomplete to ignore its internal menu visibility status and always
           hide/show the menu based on <code>props.open</code>. Pair this with <code>props.onMenuVisibilityChange</code>
            - which is invoked each time the internal visibility state changes - for full control
-          over the menu's visibility.
+          over the menu&apos;s visibility.
         </p>
         <label htmlFor="states">Choose a US state</label>
         <Autocomplete
@@ -81,4 +82,4 @@ class App extends Component {
 
 DOM.render(<App/>, document.getElementById('container'))
 
-if (module.hot) { module.hot.accept() }
+export default hot(module)(App);
