@@ -4,7 +4,7 @@ We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recomm
 ## [Unreleased]
 _(add items here for easier creation of next log entry)_
 
-## [1.8.5] - 2019-07-29
+## [1.8.6] - 2019-07-29
 ### Added
 - Update all dependencies
 - Migrate string refs to react.CreateRef
