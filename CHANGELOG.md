@@ -4,6 +4,16 @@ We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recomm
 ## [Unreleased]
 _(add items here for easier creation of next log entry)_
 
+## [1.8.5] - 2019-07-29
+### Added
+- Update all dependencies
+- Migrate string refs to react.CreateRef
+- Update browserif and babelify to work with last version of eslint and babel
+- Add new node commands like watching tests
+- Use react-tesing library to test easier broken tests with React.CreateRef
+- Comment imperativeAPI test. Could not make sense out it.
+
+
 ## [1.8.2] - 2019-07-25
 ### Added
 - Make component accessible to screen readers
