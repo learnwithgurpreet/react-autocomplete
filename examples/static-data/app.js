@@ -14,10 +14,16 @@ class App extends React.Component {
           When using static data, you use the client to sort and filter the items,
           so <code>Autocomplete</code> has methods baked in to help.
         </p>
+        <span id="init-Instructions" className="sr-only">When autocomplete results are available use up and down arrows to review and enter to select. Touch device users, explore by touch or with swipe gestures.</span>
         <label htmlFor="states-autocomplete">Choose a state from the US</label>
         <Autocomplete
           value={this.state.value}
-          inputProps={{ id: 'states-autocomplete', name: 'input-name' }}
+          inputProps={{
+            id: 'states-autocomplete',
+            name: 'input-name',
+            autoComplete: "something" ,
+            'aria-describedby':"init-Instructions"
+           }}
           suggestionsMenuId="input-name-suggestions"
           wrapperStyle={{ position: 'relative', display: 'inline-block' }}
           items={getStates()}
@@ -26,8 +32,8 @@ class App extends React.Component {
           sortItems={sortStates}
           onChange={(event, value) => this.setState({ value })}
           onSelect={value => this.setState({ value })}
-          renderMenu={children => (
-            <div className="menu" id="input-name-suggestions" role="listbox">
+          renderMenu={(children, suggestionsMenuId) => (
+            <div className="menu" id={suggestionsMenuId} role="listbox">
               {children}
             </div>
           )}
@@ -35,6 +41,7 @@ class App extends React.Component {
             <div
               className={`item ${isHighlighted ? 'item-highlighted' : ''}`}
               key={item.abbr}
+              aria-selected={isHighlighted}
               role="option"
             >{item.name}</div>
           )}
