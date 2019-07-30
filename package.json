@@ -95,6 +95,7 @@
   ],
   "keywords": [],
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "dom-scroll-into-view": "1.2.1",
     "prop-types": "^15.7.2"
   },
