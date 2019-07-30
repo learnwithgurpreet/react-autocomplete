@@ -74,7 +74,6 @@
     "eslint-plugin-react": "^7.14.3",
     "exorcist": "^1.0.1",
     "jest": "^24.8.0",
-    "loadsh": "0.0.4",
     "lodash.flow": "^3.5.0",
     "lodash.map": "^4.6.0",
     "lodash.sortby": "^4.7.0",
@@ -97,6 +96,7 @@
   "dependencies": {
     "@babel/polyfill": "^7.4.4",
     "dom-scroll-into-view": "1.2.1",
+    "lodash.memoize": "^4.1.2",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {
