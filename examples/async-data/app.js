@@ -31,7 +31,6 @@ class App extends React.Component {
             autoComplete: "something" ,
             'aria-describedby':"init-Instructions"
           }}
-          open={true}
           suggestionsMenuId="input-name-suggestions"
           wrapperStyle={{ position: 'relative', display: 'inline-block' }}
           value={this.state.value}
