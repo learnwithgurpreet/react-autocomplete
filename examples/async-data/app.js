@@ -23,9 +23,15 @@ class App extends React.Component {
           a server request with, then change state and pass in new items, it will
           attempt to autocomplete the first one.
         </p>
+        <span id="init-Instructions" className="sr-only">When autocomplete results are available use up and down arrows to review and enter to select. Touch device users, explore by touch or with swipe gestures.</span>
         <label htmlFor="states-autocomplete">Choose a state from the US</label>
         <Autocomplete
-          inputProps={{ id: 'states-autocomplete' }}
+          inputProps={{
+            id: 'states-autocomplete',
+            autoComplete: "something" ,
+            'aria-describedby':"init-Instructions"
+          }}
+          open={true}
           suggestionsMenuId="input-name-suggestions"
           wrapperStyle={{ position: 'relative', display: 'inline-block' }}
           value={this.state.value}
@@ -44,14 +50,15 @@ class App extends React.Component {
               this.setState({ unitedStates: items })
             })
           }}
-          renderMenu={children => (
-            <div className="menu" id="input-name-suggestions" role="listbox">
+          renderMenu={(children, suggestionsMenuId) => (
+            <div className="menu" id={suggestionsMenuId} role="listbox">
               {children}
             </div>
           )}
           renderItem={(item, isHighlighted) => (
             <div
-            role="option"
+              role="option"
+              aria-selected={isHighlighted}
               className={`item ${isHighlighted ? 'item-highlighted' : ''}`}
               key={item.abbr}
             >{item.name}</div>
