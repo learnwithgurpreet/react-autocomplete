@@ -33,11 +33,13 @@ class App extends Component {
            - which is invoked each time the internal visibility state changes - for full control
           over the menu&apos;s visibility.
         </p>
+        <span id="init-Instructions" className="sr-only">When autocomplete results are available use up and down arrows to review and enter to select. Touch device users, explore by touch or with swipe gestures.</span>
         <label htmlFor="states">Choose a US state</label>
         <Autocomplete
           value={state.value}
           suggestionsMenuId="input-name-suggestions"
-          inputProps={{ id: 'states' }}
+          inputProps={{ id: 'states', autoComplete: "something" ,
+          'aria-describedby':"init-Instructions" }}
           items={STATES}
           shouldItemRender={matchStateToTerm}
           getItemValue={item => item.name}
@@ -47,13 +49,14 @@ class App extends Component {
             <div
               className={`item ${isHighlighted ? 'item-highlighted' : ''}`}
               key={item.abbr}
+              aria-selected={isHighlighted}
               role="option"
             >
               {item.name}
             </div>
           )}
-          renderMenu={children =>
-            <div className="menu" id="input-name-suggestions" role="listbox">
+          renderMenu={(children, suggestionsMenuId) =>
+            <div className="menu" id={suggestionsMenuId} role="listbox">
               {children}
             </div>
           }

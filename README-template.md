@@ -45,6 +45,41 @@ npm install --save react-autocomplete-2
 yarn add react-autocomplete-2
 ```
 
+## Screen reader accessibility
+As this library exposes functions that allow you to decide for yourself the DOM of:
+* Menu
+* Item
+* Input
+
+[Here is a code pen](https://codepen.io/danielavalerops/pen/KOMbLE) for you to see what attributes you should include in your DOM, so that is accessible to screen readers.
+
+TL;DR;
+Appart from all other attributes to have a valid markup
+* To `renderItem` add for example: 
+```js
+ renderItem={(item, isHighlighted) => (
+    <div
+      role="option"
+      aria-selected={isHighlighted}
+      key={item.abbr}
+    >{item.name}</div>
+  )}
+```
+* To `renderMenu` add:
+```jsx
+  id={suggestionsMenuId} 
+  role="listbox" 
+```
+* To `renderInput` add:
+```jsx
+  autoComplete="something-that-is-not-off" 
+  aria-describedby="the-id-to-instructions-if-any"
+  aria-owns={suggestionsMenuId}
+```
+
+
+**Note:** Don't follow these guides blindly. Test them in a real screen reader. Does not take so much. [Here some cheat sheets](https://dequeuniversity.com/screenreaders/)
+
 ## API
 
 ### Props

@@ -94,7 +94,9 @@
   ],
   "keywords": [],
   "dependencies": {
+    "@babel/polyfill": "^7.4.4",
     "dom-scroll-into-view": "1.2.1",
+    "lodash.memoize": "^4.1.2",
     "prop-types": "^15.7.2"
   },
   "peerDependencies": {

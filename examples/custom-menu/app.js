@@ -25,10 +25,12 @@ class App extends React.Component {
           look as well as the rendering of it. In this example we will group the states
           into the region where they belong.
         </p>
+        <span id="init-Instructions" className="sr-only">When autocomplete results are available use up and down arrows to review and enter to select. Touch device users, explore by touch or with swipe gestures.</span>
         <label htmlFor="states-autocomplete">Choose a state from the US</label>
         <Autocomplete
           value={this.state.value}
-          inputProps={{ id: 'states-autocomplete' }}
+          inputProps={{ id: 'states-autocomplete', autoComplete: "something" ,
+          'aria-describedby':"init-Instructions" }}
           items={this.state.unitedStates}
           getItemValue={(item) => item.name}
           suggestionsMenuId="input-name-suggestions"
@@ -50,10 +52,11 @@ class App extends React.Component {
               : <div
                 className={`item ${isHighlighted ? 'item-highlighted' : ''}`}
                 key={item.abbr}
+                aria-selected={isHighlighted}
               >{item.name}</div>
           )}
-          renderMenu={(items, value) => (
-            <div className="menu" id="input-name-suggestions" role="listbox">
+          renderMenu={(items, suggestionsMenuId, value) => (
+            <div className="menu" id={suggestionsMenuId} role="listbox">
               {value === '' ? (
                 <div className="item">Type of the name of a United State</div>
               ) : this.state.loading ? (
