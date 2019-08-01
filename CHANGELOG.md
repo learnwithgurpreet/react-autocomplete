@@ -4,6 +4,12 @@ We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recomm
 ## [Unreleased]
 _(add items here for easier creation of next log entry)_
 
+
+## [1.8.7] - 2019-08-01
+### Added
+- Add notes in README to explain how to setup markup so that component is accessible to screen readers
+- Add markup and modify examples to make the autocomplete accessible to screen readers
+
 ## [1.8.6] - 2019-07-29
 ### Added
 - Update all dependencies
