@@ -48,5 +48,22 @@ exports[`Autocomplete.props.renderInput should be invoked in \`render\` to creat
       />
     </div>
   </div>
+  <span
+    aria-atomic="true"
+    aria-live="assertive"
+    aria-relevant="aditions"
+    role="status"
+    style={
+      Object {
+        "border": "0",
+        "clip": "rect(1px, 1px, 1px, 1px)",
+        "height": "1px",
+        "overflow": "hidden",
+        "padding": "0",
+        "position": "absolute",
+        "width": "1px",
+      }
+    }
+  />
 </div>
 `;
