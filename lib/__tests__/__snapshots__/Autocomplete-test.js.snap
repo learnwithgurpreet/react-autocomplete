@@ -2,8 +2,9 @@
 
 exports[`Autocomplete.props.renderInput should be invoked in \`render\` to create the <input> element 1`] = `
 Object {
-  "aria-expanded": false,
-  "aria-owns": "menu-suggestions-id",
+  "aria-activedescendant": "",
+  "aria-autocomplete": "list",
+  "aria-controls": "menu-suggestions-id",
   "foo": "bar",
   "onBlur": [Function],
   "onChange": [Function],
@@ -25,19 +26,27 @@ exports[`Autocomplete.props.renderInput should be invoked in \`render\` to creat
     }
   }
 >
-  <div>
-    <input
-      aria-expanded={false}
-      aria-owns="menu-suggestions-id"
-      autoComplete="on"
-      foo="bar"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      value="pants"
-    />
+  <div
+    aria-expanded={false}
+    aria-haspopup="listbox"
+    aria-owns="menu-suggestions-id"
+    role="combobox"
+  >
+    <div>
+      <input
+        aria-activedescendant=""
+        aria-autocomplete="list"
+        aria-controls="menu-suggestions-id"
+        autoComplete="on"
+        foo="bar"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        value="pants"
+      />
+    </div>
   </div>
 </div>
 `;
