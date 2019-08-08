@@ -20,6 +20,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Custom Menu</h1>
+        <h5>Follows pattern List Autocomplete with Automatic Selection of WAI-ARIA 1.1 for combo box</h5>
         <p>
           While Autocomplete ships with a decent looking menu, you can control the
           look as well as the rendering of it. In this example we will group the states
@@ -31,6 +32,8 @@ class App extends React.Component {
           value={this.state.value}
           inputProps={{ id: 'states-autocomplete', autoComplete: "something" ,
           'aria-describedby':"init-Instructions" }}
+          selectOnBlur={true}
+          autoHighlight={true}
           items={this.state.unitedStates}
           getItemValue={(item) => item.name}
           suggestionsMenuId="input-name-suggestions"
@@ -45,7 +48,6 @@ class App extends React.Component {
           renderItem={(item, isHighlighted) => (
             item.header ?
               <div
-                role="option"
                 className="item item-header"
                 key={item.header}
               >{item.header}</div>
@@ -53,16 +55,17 @@ class App extends React.Component {
                 className={`item ${isHighlighted ? 'item-highlighted' : ''}`}
                 key={item.abbr}
                 aria-selected={isHighlighted}
+                role="option"
               >{item.name}</div>
           )}
           renderMenu={(items, suggestionsMenuId, value) => (
             <div className="menu" id={suggestionsMenuId} role="listbox">
               {value === '' ? (
-                <div className="item">Type of the name of a United State</div>
+                <div role="status"  className="item">Type of the name of a United State</div>
               ) : this.state.loading ? (
-                <div className="item">Loading...</div>
+                <div role="status" className="item">Loading...</div>
               ) : items.length === 0 ? (
-                <div className="item">No matches for {value}</div>
+                <div role="status" className="item">No matches for {value}</div>
               ) : items}
             </div>
           )}

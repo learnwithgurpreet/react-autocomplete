@@ -17,12 +17,14 @@ class App extends React.Component {
     return (
       <div>
         <h1>Async Data</h1>
+        <h5>Follows pattern: List Autocomplete without Manual Selection approach for combobox WAI-ARIA 1.1</h5>
         <p>
           Autocomplete works great with async data by allowing you to pass in
           items. The <code>onChange</code> event provides you the value to make
           a server request with, then change state and pass in new items, it will
           attempt to autocomplete the first one.
         </p>
+
         <span id="init-Instructions" className="sr-only">When autocomplete results are available use up and down arrows to review and enter to select. Touch device users, explore by touch or with swipe gestures.</span>
         <label htmlFor="states-autocomplete">Choose a state from the US</label>
         <Autocomplete
@@ -31,6 +33,8 @@ class App extends React.Component {
             autoComplete: "something" ,
             'aria-describedby':"init-Instructions"
           }}
+          selectOnBlur={false}
+          autoHighlight={false}
           suggestionsMenuId="input-name-suggestions"
           wrapperStyle={{ position: 'relative', display: 'inline-block' }}
           value={this.state.value}
@@ -49,11 +53,6 @@ class App extends React.Component {
               this.setState({ unitedStates: items })
             })
           }}
-          renderMenu={(children, suggestionsMenuId) => (
-            <div className="menu" id={suggestionsMenuId} role="listbox">
-              {children}
-            </div>
-          )}
           renderItem={(item, isHighlighted) => (
             <div
               role="option"

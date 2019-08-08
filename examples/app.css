@@ -4,6 +4,10 @@ body {
   font-weight: 200;
 }
 
+h2 {
+  font-size: 18px;
+}
+
 .sr-only {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px);
@@ -32,7 +36,7 @@ code {
   border-radius: 3px;
 }
 
-.menu {
+[role="listbox"] {
   position: absolute;
   box-sizing: border-box;
   width: 100%;

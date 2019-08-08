@@ -23,6 +23,7 @@ class App extends Component {
     return (
       <div>
         <h1>Managed Menu Visibility</h1>
+        <h5>Follows pattern List Autocomplete with Automatic Selection of WAI-ARIA 1.1 for combo box</h5>
         <p>
           By default Autocomplete will manage its own menu visibility, using basic logic
           to decide whether or not to display it (e.g. open on focus, keypress, close on blur,
@@ -38,6 +39,8 @@ class App extends Component {
         <Autocomplete
           value={state.value}
           suggestionsMenuId="input-name-suggestions"
+          selectOnBlur={true}
+          autoHighlight={true}
           inputProps={{ id: 'states', autoComplete: "something" ,
           'aria-describedby':"init-Instructions" }}
           items={STATES}
