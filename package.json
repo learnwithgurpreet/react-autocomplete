@@ -2,10 +2,10 @@
   "name": "react-autocomplete-2",
   "version": "1.8.9-0",
   "description": "Accessible, extensible, Autocomplete for React.js",
-  "main": "./build/lib/Autocomplete.js",
+  "main": "./build/Autocomplete.js",
   "files": [
-    "build/lib/index.js",
-    "build/lib/Autocomplete.js",
+    "build/index.js",
+    "build/Autocomplete.js",
     "dist"
   ],
   "repository": {
