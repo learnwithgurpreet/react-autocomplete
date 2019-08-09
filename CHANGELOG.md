@@ -5,6 +5,15 @@ We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recomm
 _(add items here for easier creation of next log entry)_
 
 
+## [1.8.8] - 2019-08-09
+### Fixed
+- Imperative API
+### Added
+- Documentation about a11y pattern implemented
+- Updated examples and documentation
+- Improved a11y pattern and examples tested in VoiceOver in Safari
+
+
 ## [1.8.7] - 2019-08-01
 ### Added
 - Add notes in README to explain how to setup markup so that component is accessible to screen readers
