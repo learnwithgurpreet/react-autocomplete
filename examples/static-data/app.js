@@ -10,6 +10,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Basic Example with Static Data</h1>
+        <h5>Follows pattern: List Autocomplete without Manual Selection approach for combobox WAI-ARIA 1.1</h5>
         <p>
           When using static data, you use the client to sort and filter the items,
           so <code>Autocomplete</code> has methods baked in to help.
@@ -18,6 +19,8 @@ class App extends React.Component {
         <label htmlFor="states-autocomplete">Choose a state from the US</label>
         <Autocomplete
           value={this.state.value}
+          selectOnBlur={false}
+          autoHighlight={false}
           inputProps={{
             id: 'states-autocomplete',
             name: 'input-name',
