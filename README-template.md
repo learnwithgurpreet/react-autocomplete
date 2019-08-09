@@ -1,9 +1,13 @@
 # React Autocomplete 2[![Travis build status](https://travis-ci.org/danielavalero/react-autocomplete-2.svg?branch=master)](https://travis-ci.org/danielavalero/react-autocomplete-2/)
 
 Accessible, extensible, Autocomplete for React.js. 
-It's a fork from `https://github.com/reactjs/react-autocomplete` so that we maintain its development
 
-Contributions are welcomed!
+Things you should know about this fork:
+1. It's a fork from `https://github.com/reactjs/react-autocomplete` so that we maintain its development
+2. Looking for contributors
+3. I am trying to revive the original repo
+4. I am udpdating dependencies, code, adding and improving a11y, etc. Things might break. I should have done beta releases, but now is too late. I will then use the next major version to tell when things are more stable. For now, use it, find bugs, raise them here and or open pull requets!
+
 
 ```jsx
 <Autocomplete
