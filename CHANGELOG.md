@@ -5,6 +5,11 @@ We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recomm
 _(add items here for easier creation of next log entry)_
 
 
+## [1.8.9-1] - 2019-08-09
+### Fixed
+- Ensure that npm points to the right compiled babel package when publishing
+
+
 ## [1.8.8] - 2019-08-09
 ### Fixed
 - Imperative API
