@@ -1,5 +1,6 @@
-**/.*
-**/__tests__
+lib/
+lib/__tests__
+dist/
 examples
 CONTRIBUTING.md
 bower.json
