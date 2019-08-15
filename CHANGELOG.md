@@ -4,6 +4,9 @@ We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recomm
 ## [Unreleased]
 _(add items here for easier creation of next log entry)_
 
+## [1.8.12] - 2019-08-15
+### Fixed
+- Fix scrolling issue in the open menu and add a test
 
 ## [1.8.9-1] - 2019-08-09
 ### Fixed
