@@ -18,6 +18,10 @@ renderMenu(items, suggestionsMenuId, value, style) {
 * Add note to inform screen reader users the amount of available resutls. Configurable via prop: `numberOfResultsAvailableCopy`
 
 
+### Breaking changes
+* Removed control of visibility of the menu via prop.
+
+
 ### Roadmap
 Will be a breaking change
 * If you need to access to the `input` DOM element, create a reference and send it as prop. The imperative API is removed now.

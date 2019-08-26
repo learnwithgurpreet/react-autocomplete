@@ -221,12 +221,6 @@ Arguments: `value: String, item: Any`
 
 Invoked when the user selects an item from the dropdown menu.
 
-#### `open: Boolean` (optional)
-Used to override the internal logic which displays/hides the dropdown
-menu. This is useful if you want to force a certain state based on your
-UX/business logic. Use it together with `onMenuVisibilityChange` for
-fine-grained control over the dropdown menu dynamics.
-
 #### `renderInput: Function` (optional)
 Default value:
 ```jsx

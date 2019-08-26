@@ -4,6 +4,14 @@ We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recomm
 ## [Unreleased]
 _(add items here for easier creation of next log entry)_
 
+## [2.0.0] - 2019-08-26
+### Fixed
+- Imperative API. It now calls the handleBlur and handleFocus
+
+### Breaking change
+- Removed prop: `open` which allowed to control the menu visibility. Was way too complex.
+
+
 ## [1.8.12] - 2019-08-15
 ### Fixed
 - Fix scrolling issue in the open menu and add a test
