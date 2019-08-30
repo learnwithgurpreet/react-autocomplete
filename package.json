@@ -1,6 +1,6 @@
 {
   "name": "react-autocomplete-2",
-  "version": "1.8.11",
+  "version": "2.0.0",
   "description": "Accessible, extensible, Autocomplete for React.js",
   "main": "./build/Autocomplete.js",
   "files": [
@@ -77,9 +77,9 @@
     "lodash.flow": "^3.5.0",
     "lodash.map": "^4.6.0",
     "lodash.sortby": "^4.7.0",
-    "react": "^16.8.6",
+    "react": "^16.9.0",
     "react-docgen": "^4.1.1",
-    "react-dom": "^16.8.6",
+    "react-dom": "^16.9.0",
     "react-hot-loader": "^4.12.10",
     "scripty": "^1.9.1",
     "st": "^1.2.2",

@@ -69,7 +69,7 @@ class App extends React.Component {
               ) : items}
             </div>
           )}
-          isItemSelectable={(item) => !item.header}
+          isItemSelectable={(item) => !!item && !item.header}
         />
       </div>
     )
