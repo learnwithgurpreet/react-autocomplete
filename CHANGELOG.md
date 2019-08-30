@@ -4,6 +4,12 @@ We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recomm
 ## [Unreleased]
 _(add items here for easier creation of next log entry)_
 
+## [2.1.0] - 2019-08-26
+### Fixed UX: Standarization of UX
+
+- Will open the menu only when the value of the input is not empty onChange.
+- Will not open the menu on focus
+
 ## [2.0.0] - 2019-08-26
 ### Fixed
 - Imperative API. It now calls the handleBlur and handleFocus
