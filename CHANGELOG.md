@@ -4,6 +4,11 @@ We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recomm
 ## [Unreleased]
 _(add items here for easier creation of next log entry)_
 
+## [2.2.0] - 2020-04-28
+### Feature
+
+- Add openOnFocus feature. Means the suggestion will shown when focusing the input field.
+
 ## [2.1.0] - 2019-08-26
 ### Fixed UX: Standarization of UX
 
