@@ -20,7 +20,7 @@ jobs:
       - name: 📦 install packages
         run: npm ci
       - name: 🛠 build
-        run: npm ci
+        run: npm run build
       - name: 🚀 publish
         run: npm publish --access public
         env:

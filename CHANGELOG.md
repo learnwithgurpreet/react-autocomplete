@@ -1,382 +1,461 @@
-#### 1.0.0 (2022-08-24)
-
-##### Bug Fixes
-
-- **A11y:** Fixed aria-activedescendant related problem ([44c49a58](https://github.com/learnwithgurpreet/react-autocomplete/commit/44c49a5891f8be5f04657a9f95e28d627cb390fb))
-
-# CHANGELOG
-
-We try to follow [http://keepachangelog.com/](http://keepachangelog.com/) recommendations for easier to update & more readable change logs.
-
-## [Unreleased]
-
-_(add items here for easier creation of next log entry)_
-
-## [2.2.0] - 2020-04-28
-
-### Feature
-
-- Add openOnFocus feature. Means the suggestion will shown when focusing the input field.
-
-## [2.1.0] - 2019-08-26
-
-### Fixed UX: Standarization of UX
-
-- Will open the menu only when the value of the input is not empty onChange.
-- Will not open the menu on focus
-
-## [2.0.0] - 2019-08-26
-
-### Fixed
-
-- Imperative API. It now calls the handleBlur and handleFocus
-
-### Breaking change
-
-- Removed prop: `open` which allowed to control the menu visibility. Was way too complex.
-
-## [1.8.12] - 2019-08-15
-
-### Fixed
-
-- Fix scrolling issue in the open menu and add a test
-
-## [1.8.9-1] - 2019-08-09
-
-### Fixed
-
-- Ensure that npm points to the right compiled babel package when publishing
-
-## [1.8.8] - 2019-08-09
-
-### Fixed
-
-- Imperative API
-
-### Added
-
-- Documentation about a11y pattern implemented
-- Updated examples and documentation
-- Improved a11y pattern and examples tested in VoiceOver in Safari
-
-## [1.8.7] - 2019-08-01
-
-### Added
-
-- Add notes in README to explain how to setup markup so that component is accessible to screen readers
-- Add markup and modify examples to make the autocomplete accessible to screen readers
-
-## [1.8.6] - 2019-07-29
-
-### Added
-
-- Update all dependencies
-- Migrate string refs to react.CreateRef
-- Update browserif and babelify to work with last version of eslint and babel
-- Add new node commands like watching tests
-- Use react-tesing library to test easier broken tests with React.CreateRef
-- Comment imperativeAPI test. Could not make sense out it.
-
-## [1.8.2] - 2019-07-25
-
-### Added
-
-- Make component accessible to screen readers
-- Allow users to set the autocomplete attribute to a value different than off
-
-## [1.8.1] - 2018-02-11
-
-### Fixed
-
-- Prevent menu from closing prematurely on mobile (#308)
-- Fix for up-arrow not working after `props.isItemSelectable` was added (#315)
-
-## [1.8.0] - 2018-02-04
-
-### Added
-
-- `props.isItemSelectable` which allows rendering items that will not function as selectable items, but instead as static information/decoration elements such as headers (thanks to @rssteffey with help from @rmcauley) (#241)
-
-## [1.7.3] - 2018-02-04
-
-### Fixed
-
-- Release focus-lock when user uses Enter to close menu (thanks to @Fralleee for discovering this edge case) (#304)
-
-## [1.7.2] - 2017-10-8
-
-### Changed
-
-- Include React v16 in peer-dependency version range (#280)
-
-## [1.7.1] - 2017-08-20
-
-### Fixed
-
-- Do not select an item on Enter keypress when keyCode is not 13 (#201)
-
-## [1.7.0] - 2017-08-20
-
-### Added
-
-- `props.selectOnBlur` to select any highlighted item on blur (#251)
-
-## [1.6.0] - 2017-08-19
-
-### Added
-
-- `props.renderInput` to allow custom `<input>` components (#247)
-
-## [1.5.10] - 2017-07-20
-
-### Fixed
-
+- changed script to publish the component on npm
+- added github action
+- 3.0.0
+- Update README
+- 3.0.0
+- 2.0.0
+- 1.0.2
+- 1.0.1
+- Merge pull request #2 from learnwithgurpreet/feat/add-change-log
+- faet(chore): added script to genereate change log
+- Merge pull request #1 from learnwithgurpreet/fix/a11y-aria-activedescendant
+- made changes for new npm module setup
+- fix(A11y): Fixed aria-activedescendant related problem
+- Add openOnFocus to readme
+- 2.3.0
+- Update changelog for version 2.2.0
+- 2.2.0
+- feat: Add openOnFocus feature
+- 2.1.0
+- Merge pull request #7 from DanielaValero/fix/remove-open-and-fix-imperative-api
+- add release notes v2.1.0
+- feat: open menu only when there are values and not on focus
+- build: Update to react 16.9.0
+- build: remove menu example from localhost
+- docs: Remove example of outside management of menu visibility
+- 2.0.0
+- Update README
+- docs: Update changelog of version 2 and documentation
+- fix: Call onBlur and onFocus in imperativeAPI and remove openProp
+- Update changelog to v1.8.12
+- 1.8.11
+- Merge pull request #6 from DanielaValero/fix/resolve-scrolling-issue
+- fix: Resolve issues with scrolling to item and add unit test
+- build: update some of the dependencies
+- 1.8.11-0
+- 1.8.10-0
+- docs: add release notes for 1.8.9-1
+- build: Point to built compiled package for npm
+- 1.8.9-0
+- build: dont add lib to npm to try to get things updated
+- 1.8.8
+- Update README
+- docs: Add release notes for version 1.8.8
+- docs: Add notes in readme about fork state
+- Merge pull request #5 from DanielaValero/feat/stabilization-and-a11y
+- feat: dont show hint of results below if empty text
+- test: Select based on aria roles instead of div and positions in dom
+- feat: extend screen readers functionality
+- fix: Append properly the events to Automplete for the imperative API
+- docs: Update documentation of how to make accessible to screen readers
+- 1.8.7
+- Update README
+- changelog: Add release notes for 1.8.7"
+- Merge pull request #4 from DanielaValero/feat/3-screen-reader
+- feat: Update all examples with a11y features
+- chore: let example closed
+- build: Install only lodas memoize
+- refactor: Remove setting menu positions did not see why is required
+- feat(a11y): Make component usable with screen readers
+- refactor: Start to migrate deprecated standards
+- feat: Autohighligh entered text after component update
+- chore: destructre props and state
+- chore: beautify code
+- chore: access state and props from class rather than args
+- docs: Add migration guide
+- feat: Drop support of Node < 6
+- changelog: fix release version
+- 1.8.6
+- 1.8.5
+- changelog: Add release notes 1.8.5
+- Merge pull request #2 from DanielaValero/build/update-deps
+- build: Update deps with full migration of deprecated feats like ref strings
+- build: fix build command with new requirements of dependencies
+- build: Start to Update all dependencies
+- 1.8.4
+- Update README
+- build: update links and stuff
+- 1.8.3
+- Update README
+- test making a release
+- docs: rename package and update docs
+- docs: update examples with new prop
+- feat: Make accessible to screen readers and allow autocomplete to be set
+- Update README
+- 1.8.1
+- Update README
+- Update CHANGELOG with 1.8.1 release
+- Merge pull request #308 from mattraykowski/mobile-blur-fix
+- Merge pull request #315 from rssteffey/fix-arrow-up
+- Fix ArrowUp to properly skip over unselectable items
+- 1.8.0
+- Update README
+- Update CHANGELOG with 1.8.0 release
+- Update Custom Menu example to use isItemSelectable
+- Add props.isItemSelectable
+- Update README
+- 1.7.3
+- Update README
+- Update CHANGELOG with 1.7.3 release
+- Release focus-lock when user uses Enter to close menu
+- Fixed #307: ignore blur on touch start.
+- 1.7.2
+- Update README
+- Update CHANGELOG with 1.7.2 release
+- Merge pull request #280 from bell-steven/master
+- add react 16 as a peer dependency
+- 1.7.1
+- Update CHANGELOG with 1.7.1 release
+- Prevent item selection when keyCode != 13
+- Fix incorrect version number in latest release notes
+- Update README
+- 1.7.0
+- Update README
+- Update CHANGELOG with 1.6.0 and 1.7.0 releases
+- Add props.selectOnBlur
+- Remove `styles` from utils
+- 1.6.0
+- Update README
+- Add props.renderInput
+- Enable snapshotting of enzyme wrapper objects
+- Update README
+- Add link to JSBin example in README
+- Update README
+- Add example uses to inputProps documentation
+- Update README
+- 1.5.10
+- Update CHANGELOG with 1.5.10 release
 - Make setState updaters compatible with preact-compat (#258)
-
-## [1.5.9] - 2017-06-16
-
-### Fixed
-
-- Reworked focus management to be more consistent and handle edge cases (async focus, input out of viewport, etc., read more in #153, #246, #222, & #240)
-
-## [1.5.8] - 2017-06-16
-
-### Fixed
-
-- Ensure top match is highlighted even if `props.items` arrive out of order (async) (#249)
-
-## [1.5.7] - 2017-06-14
-
-### Changed
-
-- Improve auto highlight logic, reduces render count and fixes some edge cases
-- Make `props.debug` only show renders relating to the current instance
-
-## [1.5.6] - 2017-06-01
-
-### Fixed
-
-- Include prop-types in UMD build, fixes an unintentional breaking change introduced in 1.5.5
-
-## [1.5.5] - 2017-05-29
-
-### Fixed
-
-- Replace deprecated React.PropTypes with prop-types module (#232)
-- Replace deprecated React.createClass with class syntax (#232)
-
-## [1.5.4] - 2017-05-25
-
-### Fixed
-
+- Update README
+- Make `renderMenu` doc more explicit wrt. including `items`
+- Clear items in custom-menu example when fetching new data
+- Clear fake request timeouts on subsequent requests in examples
+- Update README
+- Prevent custom meny example from erring on input
+- Remove unnecessary loading state variable from example
+- Remove unnecessary ref from example
+- Fix indentation in example (whitespace)
+- Remove unnecessary `id` prop in examples
+- Fix 'kewDown' typos in test descriptions
+- Fix menuStyle/menuStyles typo in documentation
+- Update README
+- 1.5.9
+- Update CHANGELOG with 1.5.9 release
+- Make utils.fakeRequest work when `value` is empty
+- Rework focus management
+- Specify explicit call counts when checking spies
+- Use .toHaveBeenCalled() instead of mock.calls.length
+- Update README
+- 1.5.8
+- Update README
+- Update CHANGELOG with 1.5.8 release
+- Highlight top match when `props.items` changes
+- 1.5.7
+- Update CHANGELOG with 1.5.7 release
+- Fix indentation (whitespace)
+- Remove guard that is no longer needed
+- Simplify autoHighlight logic
+- Add test for selecting item by using the mouse
+- Add test for highlighting item on hover
+- Rename test group
+- Remove redundant props from test fixtures
+- Remove redundant jest.unmock statements in tests
+- Ensure the correct debug states are printed
+- Make debugStates a class field
+- Remove unused 'name' input prop from examples
+- Update README
+- 1.5.6
+- Update CHANGELOG with 1.5.6 release
+- Include prop-types in UMD build
+- Update README
+- Add basic usage example to README
+- Update README
+- 1.5.5
+- Update CHANGELOG with 1.5.5 release
+- Fix incorrect argument count provided in test expectencies
+- Update unit test dependencies
+- Fix indentation (whitespace)
+- Replace deprecated React.createClass with class syntax
+- Update react-docgen dependency
+- Use absolute paths in .gitignore
+- Replace deprecated React.PropTypes with prop-types module
+- Update README
+- 1.5.4
+- Update CHANGELOG with 1.5.4 release
 - Delay re-focus until all actions have been processed (#240)
-
-## [1.5.3] - 2017-05-14
-
-### Fixed
-
-- Prevent menu from closing when interacting with scrollbar in IE (#211, #222)
-
-## [1.5.2] - 2017-05-11
-
-### Fixed
-
-- Prevent onFocus and onBlur when selecting an item (#229)
-
-## [1.5.1] - 2017-04-27
-
-### Fixed
-
-- Remove logic that selected highlighted item on input click. This was no longer desired after typeahead was removed.
-
-## [1.5.0] - 2017-04-23
-
-### Added
-
-- Public imperative API which can be used to perform actions such as focus, blur, set selection range, etc
-
-## [1.4.4] - 2017-04-16
-
-### Fixed
-
-- Prevent highlighted selection from being cleared when pressing keys that don't modify `input.value` (e.g. ctrl, alt, left/right arrows, etc)
-
-## [1.4.3] - 2017-04-16
-
-### Fixed
-
-- Ensure menu positions are set when specifying `props.open`
-
-## [1.4.2] - 2017-04-02
-
-### Fixed
-
-- Workaround for "Cannot read property 'ownerDocument' of null"
-
-## [1.4.1] - 2017-03-16
-
-### Fixed
-
-- Add missing aria-expanded attribute
-
-## [1.4.0] - 2016-11-07
-
-### Added
-
-- Add all event handlers specified in `props.inputProps` to `<input>`
-
-## [1.3.1] - 2016-08-01
-
-### Changed
-
-- Re-publish without `node_modules` and `coverage` included in tarball
-
-## [1.3.0] - 2016-08-01
-
-### Added
-
-- `props.open` to manually control when the menu is open/closed (#163)
-- `props.onMenuVisibilityChange` callback that is invoked every time the menu is opened/closed by `Autocomplete`'s internal logic. Pairs well with `props.open` for granulated control over the menu's visibility (#163)
-
-### Removed
-
-- `bower.json` has been removed from the repo
-
-## [1.2.1] - 2016-08-09
-
-### Fixed
-
-- `build/package.json` incorrectly stated `1.1.0` for the version, a quick rebuild and
-  patch version publish got these back in sync.
-
-## [1.2.0] - 2016-08-09
-
-### Added
-
-- `props.autoHighlight` to toggle automatic highlighting of top match (see #146 & #159)
-
-### Fixed
-
-- Bug which prevented menu from closing properly in IE (see #153)
-- .babelrc presets were causing 1 user(s) to not be able to run tests locally with Jest
-
-## [1.1.0] - 2016-08-02
-
-### Added
-
-- Ability to return custom components from renderMenu/renderItem (see #127)
-- Added missing `propTypes`
-- Jest for testing (replaces mocha/isparta)
-- eslint consuming the rackt config
-
-### Fixed
-
-- Custom Menu Example (#81)
-- Bug causing menu to close immediately when clicking into input (#84)
-- Bug referencing `this.state.value` (has since been moved to props)
-- Reset `highlightedIndex` when it's outside `items.length` (#139)
-- Removed typeahead behavior for improved mobile functionality (#40, #111, #152)
-
-### Updated
-
-- rackt-cli (#131, #51, #107)
-- repo urls (#114)
-- Jest ignore rules & configurations
-
-## [1.0.1] - 2016-06-26
-
----
-
-- Fixed compatibility issues with React 15.x, removed use of previously deprecated APIs
-
-## v1.0.0 - 17 June 2016
-
-- Additional failing tests fixed, pre-publish build with 1.0.0 changes
-
-## v1.0.0-rc6 - 5 June 2016
-
-- Updated propTypes for several props being used but not included here
-- Several issues and fixes from #68, #84, #92, #93, #103, #104, #106
-- Actually built the build/dist files and included them in the publish
-
-## v1.0.0-rc5 - 5 June 2016
-
-- Dependencies clean up (removed duplicates and large lodash dependency)
-- Demoted React to peerDependency
-
-## v1.0.0-rc3 - 25 May 2016
-
-- Removed lodash dependency, reducing overall package size
-- Removed iternally rendered `<label>`, deprecating `labelText` prop
-
-## v1.0.0-rc2 - 31 Mar 2016
-
-- Fixed a blocking issues for IE 11 users, detailed in #80
-- Added `wrapperProps` and `wrapperStyle` props that are passed
-  to the `<Autocomplete />`'s root HTML wrapper. (via #91)
-
-## v1.0.0-rc1 - 31 Mar 2016
-
-- Updated this component to no longer use internal state
-  for retaining value, this is prop driven now.
-- The version number `1.0.0-rc1` is an unforunate coincidence,
-  We're only bumping this as it introduces breaking changes.
-- Other outstanding PRs may be merged in to the the final
-  release so we can break several things at once (now that we
-  have tests of course)
-
-## v0.2.1 - 10 Mar 2016
-
-- Added unit tests (thanks @ryanalane)
-- Updated README.md
-
-## v0.1.4 - Wed, 12 Aug 2015 20:22:13 GMT
-
--
-
-## v0.1.3 - Wed, 12 Aug 2015 20:16:46 GMT
-
-- [5306a64](../../commit/5306a64) [fixed] npm main entry
-
-## v0.1.2 - Wed, 12 Aug 2015 19:36:38 GMT
-
-- [34b185b](../../commit/34b185b) [fixed] incorrect style merging
-
-## v0.1.1 - Wed, 12 Aug 2015 19:34:11 GMT
-
-- [fd23644](../../commit/fd23644) [fixed] left-over console.log :|
-
-## v0.1.0 - Wed, 12 Aug 2015 19:22:26 GMT
-
--
-
-[unreleased]: https://github.com/reactjs/react-autocomplete/compare/v1.8.1...HEAD
-[1.8.1]: https://github.com/reactjs/react-autocomplete/compare/v1.8.0...v1.8.1
-[1.8.0]: https://github.com/reactjs/react-autocomplete/compare/v1.7.3...v1.8.0
-[1.7.3]: https://github.com/reactjs/react-autocomplete/compare/v1.7.2...v1.7.3
-[1.7.2]: https://github.com/reactjs/react-autocomplete/compare/v1.7.1...v1.7.2
-[1.7.1]: https://github.com/reactjs/react-autocomplete/compare/v1.7.0...v1.7.1
-[1.7.0]: https://github.com/reactjs/react-autocomplete/compare/v1.6.0...v1.7.0
-[1.6.0]: https://github.com/reactjs/react-autocomplete/compare/v1.5.10...v1.6.0
-[1.5.10]: https://github.com/reactjs/react-autocomplete/compare/v1.5.9...v1.5.10
-[1.5.9]: https://github.com/reactjs/react-autocomplete/compare/v1.5.8...v1.5.9
-[1.5.8]: https://github.com/reactjs/react-autocomplete/compare/v1.5.7...v1.5.8
-[1.5.7]: https://github.com/reactjs/react-autocomplete/compare/v1.5.6...v1.5.7
-[1.5.6]: https://github.com/reactjs/react-autocomplete/compare/v1.5.5...v1.5.6
-[1.5.5]: https://github.com/reactjs/react-autocomplete/compare/v1.5.4...v1.5.5
-[1.5.4]: https://github.com/reactjs/react-autocomplete/compare/v1.5.3...v1.5.4
-[1.5.3]: https://github.com/reactjs/react-autocomplete/compare/v1.5.2...v1.5.3
-[1.5.2]: https://github.com/reactjs/react-autocomplete/compare/v1.5.1...v1.5.2
-[1.5.1]: https://github.com/reactjs/react-autocomplete/compare/v1.5.0...v1.5.1
-[1.5.0]: https://github.com/reactjs/react-autocomplete/compare/v1.4.4...v1.5.0
-[1.4.4]: https://github.com/reactjs/react-autocomplete/compare/v1.4.3...v1.4.4
-[1.4.3]: https://github.com/reactjs/react-autocomplete/compare/v1.4.2...v1.4.3
-[1.4.2]: https://github.com/reactjs/react-autocomplete/compare/v1.4.1...v1.4.2
-[1.4.1]: https://github.com/reactjs/react-autocomplete/compare/v1.4.0...v1.4.1
-[1.4.0]: https://github.com/reactjs/react-autocomplete/compare/v1.3.1...v1.4.0
-[1.3.1]: https://github.com/reactjs/react-autocomplete/compare/v1.3.0...v1.3.1
-[1.3.0]: https://github.com/reactjs/react-autocomplete/compare/v1.2.1...v1.3.0
-[1.2.1]: https://github.com/reactjs/react-autocomplete/compare/v1.2.0...v1.2.1
-[1.2.0]: https://github.com/reactjs/react-autocomplete/compare/v1.1.0...v1.2.0
-[1.1.0]: https://github.com/reactjs/react-autocomplete/compare/v1.0.1...v1.1.0
-[1.0.1]: https://github.com/reactjs/react-autocomplete/compare/v1.0.0...v1.0.1
+- Add .nojekyll as a part of gh-pages task
+- Update README
+- 1.5.3
+- Update README
+- Update CHANGELOG with 1.5.3 release
+- Ensure menu is hidden and focus is cleared on <Tab> and <Escape>
+- Ignore blur on menu enter/leave instead of the individual items #211 #222
+- 1.5.2
+- Update README
+- Update CHANGELOG with 1.5.2 release
+- Prevent onFocus and onBlur when selecting an item #229
+- 1.5.1
+- Update CHANGELOG with 1.5.1 release
+- Remove logic that selected highlighted item on input click
+- Update README
+- 1.5.0
+- Update CHANGELOG with 1.5.0 release
+- Update README
+- Add imperative API documentation
+- Public imperative API
+- Use callback-style refs
+- Update README
+- 1.4.4
+- Update README
+- Update CHANGELOG with 1.4.4 release
+- Only reset highlightedIndex on input value change
+- Enable eslint rule: no-trailing-spaces
+- Enable eslint rule: space-before-function-paren
+- Enable eslint rule: space-before-blocks
+- Enable eslint rule: semi
+- Enable eslint rule: quotes
+- Enable eslint rule: object-curly-spacing
+- Enable eslint rule: no-vars
+- Enable eslint rule: no-unused-vars
+- Enable eslint rule: no-multiple-empty-lines
+- Enable eslint rule: no-mixed-spaces
+- Enable eslint rule: no-extra-semi
+- Enable eslint rule: no-console
+- Enable eslint rule: no-cond-assign
+- Enable eslint rule: indent
+- Enable eslint rule: eol-last
+- Update README
+- 1.4.3
+- Update README
+- Update CHANGELOG with 1.4.3 release
+- Always check both state and props to eval. menu visibility
+- Ensure menu positions are set when opening menu via props.open
+- Ensure menu positions are set on initial render...
+- Extracted isOpen logic from render to separate method
+- 1.4.2
+- Update README
+- Update CHANGELOG with 1.4.2 release
+- Merge pull request #195 from tiemevanveen/fix-176
+- 1.4.1
+- Update CHANGELOG with 1.4.1 release
+- Add missing aria-expanded attribute (fixes #215)
+- Regenerate README
+- Create local reference to React.PropTypes
+- Add "Install" section to README
+- Make package version available to README-template
+- Improve pattern of replacements in README-template
+- Mangle variable names in production UMD build
+- Merge pull request #200 from reactjs/replace-rackt-cli
+- Document scripts in README
+- Specify files to include in published tarball
+- Add script which creates and publishes a new release
+- Add script to generate gh-pages branch
+- Remove dist dir from repo
+- Remove build dir from repo
+- Replace rackt start with watchify + st
+- Replace rackt examples with browserify
+- Replace rackt build with browserify
+- Convert npm scripts to scripty
+- Regenerate README.
+- Merge pull request #202 from golmansax/master
+- Fix wrapperProps typo in documentation
+- Merge pull request #198 from reactjs/remove-should-item-render-def-value
+- Merge pull request #199 from reactjs/example-css-cleanup
+- Merge pull request #197 from reactjs/docs
+- Remove duplicate CSS in examples
+- Merge pull request #188 from Daniel15/smarter-example
+- Merge pull request #184 from reactjs/Daniel15-patch-2
+- Remove shouldItemRender default value
+- Add generated README
+- Move Travis build status badge to header
+- Clean up some outdated info in README
+- Add 'Publishing' section to README
+- Remove unused arguments in `onChange` default value
+- Add missing `items` entry in propTypes
+- Add propType documentation
+- Add script to generate README with API doc
+- fix #176 - ownerDocument error ..for now
+- Merge pull request #181 from reactjs/Daniel15-patch-1
+- Nicer sorting algorithm for example
+- Update package.json main to point to actual main file
+- Update example URL
+- 1.4.0
+- Update CHANGELOG with 1.4.0 release
+- Update build and dist files
+- Merge pull request #165 from reactjs/prevent-event-handler-clobbering
+- Ensure all event handlers specified in `props.inputProps` are added correctly
+- Create local reference to `props.inputProps` in `render()`
+- Remove unnecessary function-wrapping when adding event handlers
+- 1.3.1
+- Update CHANGELOG with 1.3.1 release
+- Update build and dist files
+- 1.3.0
+- Update CHANGELOG with 1.3.0 release
+- Merge pull request #163 from reactjs/managed-menu-visibility
+- Managed Menu Visiblity example
+- Added props.open to allow overriding state.isOpen
+- Add props.onMenuVisiblityChange to be notified about changes to state.isOpen
+- Fix links in CHANGELOG
+- Merge pull request #162 from reactjs/remove-bower
+- closes #160 - remove bower.json from the repo
+- [release] 1.2.1
+- [release] 1.2.0
+- Update changelog
+- [added] autoHighlight prop to toggle automatic highlighting of top match (#159)
+- Lint before tests
+- [fixed] Fixed block scoping bug in 61a4e05
+- Add comment explaining ignoreBlur usage
+- [fixed] Ensure ignoreBlur is not cleared prematurely (fixes #153)
+- Merge pull request #157 from reactjs/spr/babel-issue
+- [fixed] hoisting babel presets seems to allow jest tests to run on more systems
+- update overlooked package.json version (post-publish)
+- Merge pull request #156 from reactjs/relase/1.1.0
+- [release] 1.1.0
+- Remove typeahead (fixes #40, #111) (#152)
+- [added] .travis.yml config, shields.io badge to integrate with TravisCI hooks (#150)
+- Prefix unmockedModulePathPatterns with <rootDir> to avoid conflicts
+- Improve jest ignore rules
+- Merge pull request #55 from reactjs/eslint
+- add linting using eslint consuming the rackt config
+- [fixed] Reset `highlightedIndex` when it's outside of `items.length` (#139)
+- [fixed] Corrected reference to old state.value
+- Merge pull request #128 from CMTegner/jest
+- Replace mocha/chai/isparta with jest
+- [fixed] Add missing propTypes
+- Merge pull request #132 from CMTegner/allow-custom-menu-item-components
+- Add comment about ignoring clicks when the input is disabled
+- [fixed] Prevent menu from closing immediately when clicking into input
+- Merge pull request #82 from CMTegner/issue-81-fix-custom-menu-example-selection-logic
+- Correctly filter items when selecting a state, fixes #81
+- Merge pull request #114 from CMTegner/update-repo-urls
+- Merge pull request #131 from CMTegner/update-rackt-cli
+- Update rackt-cli (fixes #51, #107)
+- [added] Ability to return custom components from renderMenu/renderItem (fixes #127)
+- [release] 1.0.1
+- Remove deprecated React API usage (fixes #119) (#125)
+- [release] 1.0.0 - Resolves #109 for primary changes required to get a fully qualified 1.0.0 release.
+- [fixed] Fix input click test (#115)
+- [release] 1.0.0-rc6
+- [fixed] Update homepage, repo, and bug URLs in README
+- fix arrow up/down bug when list is empty (#106)
+- renderMenu prop (#104)
+- Add getItemValue to propTypes (#103)
+- [changed] Disable native autocomplete (#93)
+- [changed] Prevent `Return` in menu from submitting surrounding form (#92)
+- [fixed] Select highlighted item on input click (#84)
+- Prevent autocomplete when clicking a non-focusable input (#68)
+- [release] RC5 - Dependency Cleanup
+- [release] RC4 - Dependency Cleanup
+- Dependency cleanup (#94)
+- [release] 1.0.0-rc3
+- Merge branch 'master' of github.com:reactjs/react-autocomplete
+- Remove lodash dependency and hardcoded label (#89)
+- [release] 1.0.0-rc2 IE11 Bugfix, additional wrapper customizations.
+- [fixed] Workaround for selection bug in IE, fixes #80
+- [added] wrapperProps and wrapperStyle props
+- [release] 1.0.0-rc1 vets moving to a prop-driven value over internal state.
+- Add test for character input
+- Update tests to reflect removal of `value` from state
+- Updating examples to use new `value` prop
+- [changed] Stop holding input value in state
+- [release] 0.2.1 - Tests, README updates
+- Merge pull request #77 from lab-coop/tests
+- Added back a missing parameter
+- Removed unused devDependencies and added two needed root-level ones
+- Fixed broken test order
+- Added test for closing menu when input is blurred
+- Added test instructions to README
+- Changed an expect() to check state instead of an arbitrary object property
+- Changed code coverage option to produce lcov detailed artifacts
+- Added code coverage script
+- Added unit tests for Autocomplete#renderMenu
+- Added comments
+- Added tests for Autocomplete kewDown->ArrowUp event handlers
+- Added tests for Autocomplete kewDown->ArrowDown event handlers
+- Added test for keyDown->Escape event handlers
+- Changed keyUp simulated key to Backspace
+- Added tests and improved comments for Autocomplete kewDown->Enter event handlers
+- Improved comment clarity
+- Added two tests
+- Added jsdom setup file to 'npm test' mocha command
+- Moved utils.js into lib to be used also in tests
+- Added '|| 0' fallback in case getComputedStyle() returns empty string
+- Added global.window context to getComputedStyle() reference
+- Added jsdom setup file for tests
+- Put babel preset config behind 'test' environment variable
+- Added ref attribute to <label>
+- Initialized a wrapper for Autocomplete component in test
+- Added test command and babel dependency
+- Added accessible name to examples
+- Removed testing references leftover from different branch
+- Corrected spelling
+- Added labelText and <label> styles to custom-menu example
+- Added labelText and <label> styles to async-data example
+- Added labelText and <label> styles to static-data example
+- Corrected reference to labelText property
+- Added <label> linked to <input>
+- Added mocha test command to package.json
+- feat(babel): add babel
+- Added mocha to package.json
+- Merge pull request #73 from wyvernnot/fix-example-link
+- Added mocha test command to package.json
+- feat(babel): add babel
+- Added mocha to package.json
+- README: Fix broken examples link
+- Merge pull request #48 from christianvuerings/patch-1
+- [release] Version 0.2.0 with upgrades to React (^0.14.0)
+- Merge pull request #62 from rxaviers/bump_react_0_14
+- Bump react.js to 0.14.x
+- README: Add link to the examples
+- remove busted aria-label
+- notes
+- release v0.1.4
+- forgot to build, new projects man, new projects
+- release v0.1.3
+- [fixed] npm main entry
+- HALP!
+- release v0.1.2
+- [fixed] incorrect style merging
+- release v0.1.1
+- [fixed] left-over console.log :|
+- release v0.1.0
+- skip rackt-cli stuff for now
+- first build/dist
+- new API
+- comments
+- Merge pull request #6 from KyleAMathews/patch-1
+- URL moved
+- readme update
+- ignore examples/build
+- allow empty string labels
+- don’t require a match in the list for the inputValue
+- moved examples, added flickr
+- release v0.0.2
+- move the demo up high, that’s what the people want
+- add demo source link
+- get a real export happenin’
+- lets try to kill this bundle thing again
+- support arbitrary children in the menu
+- LICENSE and README
+- meh
+- add crappy support for autocomplete=inline
+- comments + propType declarations
+- release v0.0.1
+- prerelease stuff
+- add gitignore
+- update bundle before ignoring it
+- make option component
+- fix focus jumpiness,clear selected when backspacing
+- fixed the selected option being one state behind
+- shuffling code around
+- get the right selected option right
+- added accessibility
+- blur options close the list
+- updated the bundle
+- prevent the crazy mouse jumping
+- and pretty much done
+- hmm, gonna change this
+- event better
+- not bad …
+- wip
+- boilerplate
