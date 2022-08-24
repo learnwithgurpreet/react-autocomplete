@@ -1,3 +1,4 @@
+- added build command in github actions
 - changed script to publish the component on npm
 - added github action
 - 3.0.0
