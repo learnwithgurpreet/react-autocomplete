@@ -177,12 +177,6 @@ Default value: `true`
 Whether or not to automatically highlight the top match in the dropdown
 menu.
 
-#### `openOnFocus: Boolean` (optional)
-
-Default value: `false`
-
-If set to true, the suggestion list will be shown on input focus.
-
 #### `inputProps: Object` (optional)
 
 Default value: `{}`
