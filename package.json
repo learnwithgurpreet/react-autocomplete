@@ -1,6 +1,6 @@
 {
-  "name": "react-autocomplete-2",
-  "version": "2.3.0",
+  "name": "@learnwithgurpreet/react-autocomplete",
+  "version": "1.0.0",
   "description": "Accessible, extensible, Autocomplete for React.js",
   "main": "./build/Autocomplete.js",
   "files": [
@@ -10,10 +10,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/danielavalero/react-autocomplete-2.git"
+    "url": "https://github.com/learnwithgurpreet/react-autocomplete.git"
   },
-  "homepage": "https://github.com/danielavalero/react-autocomplete-2",
-  "bugs": "https://github.com/danielavalero/react-autocomplete-2/issues",
+  "homepage": "https://github.com/learnwithgurpreet/react-autocomplete",
+  "bugs": "https://github.com/learnwithgurpreet/react-autocomplete/issues",
   "directories": {
     "example": "examples"
   },
@@ -34,7 +34,8 @@
     "lint:fix": "eslint --fix lib examples --ignore-pattern=examples/__build__/**"
   },
   "authors": [
-    "Ryan Florence <rpflorence@gmail.com>"
+    "Ryan Florence <rpflorence@gmail.com>",
+    "Gurpreet Singh <learnwithgurpreet@gmail.com>"
   ],
   "license": "MIT",
   "devDependencies": {
