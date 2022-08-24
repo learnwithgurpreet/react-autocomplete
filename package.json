@@ -31,7 +31,8 @@
     "test:jest": "scripty",
     "coverage": "scripty",
     "start": "SCRIPTY_PARALLEL=true scripty",
-    "lint:fix": "eslint --fix lib examples --ignore-pattern=examples/__build__/**"
+    "lint:fix": "eslint --fix lib examples --ignore-pattern=examples/__build__/**",
+    "generate-changelog": "changelog generate"
   },
   "authors": [
     "Ryan Florence <rpflorence@gmail.com>",
@@ -74,6 +75,7 @@
     "eslint-config-rackt": "^1.1.1",
     "eslint-plugin-react": "^7.14.3",
     "exorcist": "^1.0.1",
+    "generate-changelog": "^1.8.0",
     "jest": "^24.8.0",
     "lodash.flow": "^3.5.0",
     "lodash.map": "^4.6.0",
