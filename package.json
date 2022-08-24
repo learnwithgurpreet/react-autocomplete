@@ -1,6 +1,6 @@
 {
   "name": "@learnwithgurpreet/react-autocomplete",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Accessible, extensible, Autocomplete for React.js",
   "main": "./build/Autocomplete.js",
   "files": [
